@@ -1,0 +1,10 @@
+<!-- In todos.html -->
+{{range .}}
+<div hx-ext="path-params">
+    <form hx-delete="/todos/{{.ID}}" hx-target="#todo-list">
+        <span>{{.Title}}</span>
+        <input type="hidden" name="id" value="{{.ID}}">
+        <button type="submit">x</button>
+    </form>
+</div>
+{{end}}
